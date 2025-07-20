@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* Underline */
+
+#team { 
+    cursor: pointer;
+    position: relative;
+    font-weight:bolder;
+    font-style: italic;
+    display: inline-block; 
+}
+
+#team::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: rgba(0, 0, 0, 0.074);
+  transition: width 0.3s ease;
+}
+
+#team:hover::after {
+  width: 100%;
+}
+
+/* Grid format */
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 0.4vw 0;
+  font-size: 1.1vw;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0.4vw 0;
+}

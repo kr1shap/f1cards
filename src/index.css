@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} 
+
+:root {
+  font-family: Orbitron, sans-serif;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #cdc9c9;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: linear-gradient(220deg,#740909,#c164649d,#b76767,#440606);
+  background-size: 240% 240%;
+  animation: gradient-animation 36s ease infinite;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
